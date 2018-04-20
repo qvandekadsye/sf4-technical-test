@@ -13,7 +13,7 @@
 
     Entrez le nom d'une utilisateur Github dans le champ ci-dessous :
     {{ form_start(form) }}
-    {{ form_row(form.githubsearch) }}
+    {{ form_label(form.githubsearch,'Rechercher') }} {{ form_widget(form.githubsearch) }}
     {{ form_end(form) }}
     <div class="gitHubUserWrapper">
         {% if query is defined %}

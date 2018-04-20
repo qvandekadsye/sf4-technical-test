@@ -5,7 +5,15 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body style="margin:0;">
+    <nav style="width: 100%; background-color: #000000; padding: 10px;">
+        {% if is_granted('ROLE_USER') %}
+            <a style="color: #ffffdd" href="{{ path('logout') }}">Logout</a>
+
+        {% else %}
+            <a style="color: #ffffdd" href="{{ path('register') }}">S'inscrire</a>
+        {% endif %}
+    </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

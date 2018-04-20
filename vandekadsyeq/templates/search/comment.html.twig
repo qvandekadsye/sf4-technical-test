@@ -13,9 +13,13 @@
         <div id="commentaire_form">
 
             {{ form_start(form) }}
-            {{ form_row(form.githubUser) }}
-            {{ form_row(form.repositoryName) }}
-            {{ form_row(form.commentText) }}
+            {{ form_label(form.githubUser,'Utilisateur Github') }}
+            {{ form_widget(form.githubUser) }}
+
+            {{ form_label(form.repositoryName, 'Nom du dépôt') }}
+            {{ form_widget(form.repositoryName) }}
+            {{ form_label(form.commentText, 'Commentaire') }}
+            {{ form_widget(form.commentText) }}
             {{ form_row(form.Commenter) }}
             {{ form_end(form) }}
 

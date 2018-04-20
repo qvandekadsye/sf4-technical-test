@@ -75,11 +75,11 @@ class SearchController extends Controller
             $repositories = $response->body->items;
             foreach ($repositories as $repository)
             {
-                var_dump($repository->owner->login); die;
+
                 if ($repository->owner->login == $githubUsername)
                 {
                     $repositoriesExist = true;
-                    var_dump($repositoriesExist);die;
+
 
                 }
 
