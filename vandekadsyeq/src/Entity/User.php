@@ -33,6 +33,8 @@ class User implements UserInterface, Serializable
      */
     private $githubApiKey;
 
+    private $plainPassword;
+
     public function getId()
     {
         return $this->id;
@@ -156,6 +158,41 @@ class User implements UserInterface, Serializable
     {
         $this->githubApiKey = $githubApiKey;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param mixed $plainPassword
+     */
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+
+
 
 
 }
