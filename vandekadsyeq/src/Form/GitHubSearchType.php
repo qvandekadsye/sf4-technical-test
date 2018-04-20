@@ -20,7 +20,7 @@ class GitHubSearchType extends AbstractType
     {
         $builder
             ->add('githubsearch')
-            ->add('Login', SubmitType::class)
+            ->add('Rechercher', SubmitType::class)
         ;
     }
 
