@@ -7,6 +7,7 @@ use App\Form\CommentType;
 use App\Form\GitHubSearchType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -18,6 +19,7 @@ class SearchController extends Controller
     /**
      * @Route("/search", name="search")
      * @Method({"GET","POST"})
+     * @Security("has_role('ROLE_USER')")
      */
     public function index(Request $request)
     {
@@ -48,9 +50,11 @@ class SearchController extends Controller
     /**
      * @Route("/search/{username}/comment", name="comment")
      * @Method({"GET","POST"})
+     * @Security("has_role('ROLE_USER')")
      */
-    public function CommentAction(Request $request, UserInterface $user)
+    public function CommentAction(Request $request, UserInterface $user =null)
     {
+
         $repositoriesExist = false;
         $githubUsername=$request->get('username');
         $entityManager = $this->getDoctrine()->getManager();

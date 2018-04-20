@@ -19,9 +19,7 @@ class SecurityController extends Controller
      */
     public function connection(Request $request, AuthenticationUtils $authenticationUtils)
     {
-        return $this->render('security/index.html.twig', [
-            'controller_name' => 'SecurityController',
-        ]);
+        return $this->redirectToRoute("search");
     }
 
     /**
