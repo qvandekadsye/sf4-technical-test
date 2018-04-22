@@ -73,7 +73,7 @@ class SearchController extends Controller
 
             $response = Unirest\Request::get('https://api.github.com/search/repositories',$headers,$query);
             $repositories = $response->body->items;
-            foreach ($repositories as $repository)
+            /*foreach ($repositories as $repository)
             {
 
                 if ($repository->owner->login == $githubUsername)
@@ -83,13 +83,13 @@ class SearchController extends Controller
 
                 }
 
-            }
+            }*/
 
-            if($repositoriesExist)
-            {
+            //if($repositoriesExist)
+            //{
                 $entityManager->persist($comment);
                 $entityManager->flush();
-            }
+            //}
 
 
 
