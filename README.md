@@ -68,8 +68,17 @@ En ce qui concerne le projet, les points suivants ont été effectué :
 
 ### Améliorations possibles
 
-Par manque de temps, j'aurais souhaité mettre en place quelques fonctionnalités supplémentaires, nottament pour amméliorer l'expérience utilisateur :
+Par manque de temps, j'aurais souhaité mettre en place quelques fonctionnalités supplémentaires, nottament pour améliorer l'expérience utilisateur :
 * L'affichage des résultats en Ajax
 * Ajout de messages flash en cas d'erreur ou de succès
+* La mise en place d'une page 404
+
+### Mise en place
+ - Clonez le projet
+ - Rendez-vous dans le dossier vandekadsyeq
+ - Lancez la commande ``` composer install```
+ - Créez une base de données nommée sf4
+ - Lancez la commande ```php bin/console doctrine:migrations:migrate```
+ - Démarrer le serveur
 
 Temps passé : 5h00
