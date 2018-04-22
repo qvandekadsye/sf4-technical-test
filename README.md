@@ -47,3 +47,29 @@ https://api.github.com/search/users
 * Envoyez le lien avec le projet à recrutement@stadline.com. 
 
 **Bonne chance !**
+
+## Rendu
+En ce qui concerne le projet, les points suivants ont été effectué :
+
+### Sécurité
+
+* Mise en place d'un système d'authentification via la création d'une entité USER
+* Mise en place d'un formulaire d'inscription pour que l'utilisateur puisse s'inscrire
+* Mise en place d'un lien de déconnexion
+* Redirection sur la page de Login lorsque l'utilisateur n'est pas connecté
+* Utilisation de bcrypt pour gérer les mots de passe dans la base de données
+
+### Recherche et commentaire github
+
+* Mise en place d'une page de recherche
+* Affichage des résultat de la recherche sur la page
+* Possibilité d'ajouter un commentaire et affichage de ceux-ci
+* Utilisation de la bibliothèque Unirest pour effectuer des appels API
+
+### Améliorations possibles
+
+Par manque de temps, j'aurais souhaité mettre en place quelques fonctionnalités supplémentaires, nottament pour amméliorer l'expérience utilisateur :
+* L'affichage des résultats en Ajax
+* Ajout de messages flash en cas d'erreur ou de succès
+
+Temps passé : 5h00
