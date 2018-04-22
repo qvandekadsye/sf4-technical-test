@@ -6,11 +6,12 @@
     <style>
         .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
         .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        form {display: flex; flex-direction: column;}
     </style>
 
     <div class="example-wrapper">
         <h1>Laisser un commentaire</h1>
-        <div id="commentaire_form">
+        <div  id="commentaire_form">
 
             {{ form_start(form) }}
             {{ form_label(form.githubUser,'Utilisateur Github') }}

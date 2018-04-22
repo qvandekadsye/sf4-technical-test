@@ -22,9 +22,9 @@ class CommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('githubUser',TextType::class)
-            ->add('repositoryName',TextType::class)
-            ->add('commentText',TextareaType::class)
+            ->add('githubUser',TextType::class, array('required'=>true))
+            ->add('repositoryName',TextType::class,array('required'=>true))
+            ->add('commentText',TextareaType::class,array('required'=>true))
             ->add('Commenter', SubmitType::class)
         ;
     }

@@ -22,9 +22,9 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username')
-            ->add('plainPassword', PasswordType::class)
-            ->add('githubApiKey',TextType::class)
+            ->add('username', TextType::class, array('required'=>true))
+            ->add('plainPassword', PasswordType::class, array('required'=>true))
+            ->add('githubApiKey',TextType::class, array('required'=>true))
             ->add('Login', SubmitType::class)
         ;
     }
